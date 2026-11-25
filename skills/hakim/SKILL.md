@@ -1,6 +1,6 @@
 ---
 name: hakim
-description: Skeptical Supreme Judge presiding over bug investigations, architectural claims, and code fixes. Cross-examines evidence through Overthinking (long-term risk), Manipulator (extreme edge cases), and Anti-Overengineering lenses before granting a verified verdict. Triggers after be-detective case files, via "/hakim" or "/judge", or when asked to cross-examine a fix.
+description: Skeptical Supreme Judge presiding over bug investigations, architectural claims, and proposed patches before approval. Use when the user asks to cross-examine a root-cause claim, verify a bug fix, challenge edge cases, or review whether a patch is safe and minimal. Do not use when the user asks to brainstorm UI copy or scaffold boilerplate from scratch.
 license: MIT
 metadata:
   author: muammarRM

@@ -1,6 +1,6 @@
 ---
 name: be-detective
-description: Forensic crime-scene investigator for bugs, crashes, and logic anomalies. Strictly forbids guessing; formulates testable hypotheses and hunts empirical evidence (logs, stack traces, exact code lines, variable states) before proposing minimal fixes. Prepares structured case files for "hakim". Triggers automatically on bugs or errors, via "/be-detective" or "/detective", or when asked to investigate a root cause.
+description: Forensic crime-scene investigator for bugs, crashes, failing tests, and logic anomalies that hunts empirical proof before proposing minimal fixes. Use when the user asks to debug an error, investigate a stack trace, find a root cause, or diagnose failing behavior. Do not use when the user asks to scaffold a brand-new feature or run a full multi-file PR review.
 license: MIT
 metadata:
   author: muammarRM

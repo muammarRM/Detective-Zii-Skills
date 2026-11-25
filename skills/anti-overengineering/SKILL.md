@@ -1,6 +1,6 @@
 ---
 name: anti-overengineering
-description: Enforces strict code and architecture simplicity, eliminates bloat and premature abstractions, and applies Occam's razor (native-first and YAGNI). Triggers on coding, design, and refactoring tasks, via "/anti-overengineering" or "/simple", or when asked to simplify or remove unnecessary complexity.
+description: Enforces strict code and architecture simplicity using Occam's razor, YAGNI, and native-first solutions while removing premature abstractions. Use when the user asks to simplify code, cut bloat, flatten layers, or avoid over-engineering. Do not use when performing deep security penetration audits or forensic log debugging.
 license: MIT
 metadata:
   author: muammarRM

@@ -1,6 +1,7 @@
 # Local agent workspace duplicates & configs (keep GitHub repo single-source in skills/ & rules/)
 .agents/
 .agent/
+pro-skills/
 .superpowers/
 docs/superpowers/
 GEMINI.md
