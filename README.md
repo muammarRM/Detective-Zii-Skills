@@ -14,6 +14,16 @@ npx skills add muammarRM/Detective-Zii-Skills
 
 Or install manually per tool / globally — see **[INSTALL.md](INSTALL.md)**.
 
+### 🛡️ Security-Scanned Marketplace & Pro Suite (Agensi)
+
+Prefer 1-click MCP installs backed by an automated 8-point security scan, or looking for stack-specific **Pro skills** with runnable scripts, rubrics, and worked before/after examples?
+
+- **Bundle — [Detective-Zii Pro Suite (`$23`, Save 30% / `$10` off `$33`)](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/bundles/detective-zii-pro-suite&utm_source=github)** — All 3 Pro skills below in one bundle:
+  - **[Forensic PR Reviewer (`$12`)](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/skills/forensic-pr-reviewer&utm_source=github)** — File-grouped PR & diff reviews (`CRITICAL`/`WARNING`/`SUGGESTION`), read-only Bash/PowerShell diff collectors, OWASP/race checklists, and false-positive filtering.
+  - **[Pre-Push Leak Guard (`$9`)](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/skills/pre-push-leak-guard&utm_source=github)** — Read-only Python & PowerShell Git leak scanners plus stack-ready `.gitignore` presets catching `.env`, agent configs, dumps, and token assignments before push.
+  - **[Anti-Slop Next.js Audit (`$12`)](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/skills/anti-slop-nextjs-audit&utm_source=github)** — Zero-dependency Python UI scanner + React/Next.js/Tailwind refactoring rules stripping badge overload, sparkle spam, robotic hype copy, and accessibility gaps.
+- **Free Verified Editions on Agensi:** [Be-Detective](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/skills/be-detective&utm_source=github) · [Hakim](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/skills/hakim&utm_source=github) · [Anti-Overengineering](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/skills/anti-overengineering&utm_source=github) · [All Creator Skills](https://www.agensi.io/r/MUAMMARRAMADHANI?to=/creators/muammar-ramadhani-maulizidan&utm_source=github)
+
 ---
 
 ## 📦 Included Skills (9 Skills)
@@ -124,9 +134,18 @@ Detective-Zii-Skills/
 ├── .gitignore
 ├── skills/
 │   ├── anti-dummy-leak/SKILL.md
-│   ├── anti-overengineering/SKILL.md
-│   ├── be-detective/SKILL.md
-│   ├── hakim/SKILL.md
+│   ├── anti-overengineering/
+│   │   ├── SKILL.md
+│   │   ├── README.md
+│   │   └── examples/
+│   ├── be-detective/
+│   │   ├── SKILL.md
+│   │   ├── README.md
+│   │   └── examples/
+│   ├── hakim/
+│   │   ├── SKILL.md
+│   │   ├── README.md
+│   │   └── examples/
 │   ├── human-uiux-design/SKILL.md
 │   ├── manipulator/SKILL.md
 │   ├── orang-awam/SKILL.md
