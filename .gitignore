@@ -1,0 +1,38 @@
+# Local agent workspace duplicates & configs (keep GitHub repo single-source in skills/ & rules/)
+.agents/
+.agent/
+.superpowers/
+docs/superpowers/
+GEMINI.md
+CLAUDE.md
+*.spec.md
+*.plan.md
+*.prompt
+*.agent
+
+# Archives & local distribution zips (never commit zip bundles)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Packaging & binaries
+build/
+dist/
+*.exe
+*.spec
+
+# Scratch & temporary files
+temp.*
+*.tmp
+*.bak
+scratch/
+middle.txt
+extracted.json
+dump.*
+test_output.*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+desktop.ini
