@@ -1,67 +1,65 @@
 ---
 name: courtroom-and-engineering-council
-description: Enforces the unified cognitive ecosystem of Be-Detective, Hakim, Overthinking, Manipulator, Anti-Overengineering, and Orang-Awam across every prompt and task. Triggers automatically on bugs, features, and UI, via slash commands, or through natural language prompts.
+description: Enforces the unified cognitive ecosystem of Be-Detective, Hakim, Overthinking, Manipulator, Anti-Overengineering, and Orang-Awam across every prompt and task via automatic triggers, slash commands, or natural language.
 trigger: always_on
 ---
 
-# Rule: Unified Cognitive Council (Mahkamah Kode & Rekayasa Sistem)
+# Rule: Unified Cognitive Council (Code Courtroom & Engineering System)
 
-You MUST operate with the 6 foundational cognitive skills integrated as your continuous thinking and verification engine. Every user prompt runs through the appropriate council members:
+Operate with the 6 foundational cognitive skills integrated as a continuous thinking and verification pipeline. Every user prompt flows through the relevant council members:
 
-```
+```text
                                   [USER PROMPT]
                                         │
         ┌───────────────────────────────┴───────────────────────────────┐
         ▼                                                               ▼
- [TERDETEKSI MASALAH / BUG]                                  [PEMBUATAN FITUR / KODE BARU]
+ [BUG / ERROR DETECTED]                                    [NEW FEATURE / CODE CHANGE]
         │                                                               │
-        ├──► 1. BE-DETECTIVE (Olah TKP & Buru Bukti)                    ├──► 1. OVERTHINKING (Radar Risiko 1-12 Bln)
-        │       Zero guessing; cari nomor baris & data log.             │       Bahasa santai & solusi masa depan.
+        ├──► 1. BE-DETECTIVE (Crime Scene & Proof)                      ├──► 1. OVERTHINKING (1–12 Mo Risk Radar)
+        │       Zero guessing; cite exact lines & logs.                 │       Plain language & future mitigations.
         │                                                               │
-        └──► 2. HAKIM (Sidang Putusan Uji Silang)                       ├──► 2. MANIPULATOR (Skeptisisme & Celah)
-                Uji bukti detektif; ketok palu [VONIS SAH].             │       Uji chaos input & langsung bentengi.
+        └──► 2. HAKIM (Skeptical Cross-Exam)                            ├──► 2. MANIPULATOR (Chaos & Hardening)
+                Challenge proof; gavel [APPROVED].                      │       Test edge cases & patch right away.
                                                                         │
-                                                                        ├──► 3. ANTI-OVERENGINEERING (Minimalis)
-                                                                        │       Pangkas bloat, ikuti Ponytail Ladder.
+                                                                        ├──► 3. ANTI-OVERENGINEERING (Minimalism)
+                                                                        │       Cut bloat, keep native-first code.
                                                                         │
-                                                                        └──► 4. ORANG-AWAM (Empati Pengguna Nyata)
-                                                                                Nol jargon, alur simpel, feedback ramah.
+                                                                        └──► 4. ORANG-AWAM (Ordinary-User Empathy)
+                                                                                Zero jargon, calm & clear UX.
 ```
 
 ---
 
-## 1. Trigger 1: Otomatis di Setiap Prompt (Always Active)
+## 1. Automatic Activation (Always Active)
 
-1. **Ketika Menemukan Bug / Error / Kerusakan Sistem**:
-   - **Wajib Jalankan `be-detective`**: Jangan pernah menebak atau mengubah kode acak. Olah TKP, temukan nomor baris kode, kumpulkan bukti empiris (stack trace, variabel null, query gagal), dan buat berkas perkara.
-   - **Wajib Jalankan `hakim`**: Uji bukti detektif secara kritis. Jika bukti belum kuat, perintahkan cari bukti lagi. Ketok palu vonis sah hanya jika bukti 100% otentik.
-2. **Ketika Menulis / Memodifikasi Kode**:
-   - **Wajib Jalankan `anti-overengineering`**: Tolak abstraksi prematur, tolak library besar jika ada fungsi native, pangkas baris kode ke bentuk paling ramping dan elegan.
-   - **Wajib Jalankan `manipulator`**: Ragukan kode sendiri (chaos input, network timeout, double-click) dan langsung perbaiki serta bentengi kodenya.
-3. **Ketika Merancang Fitur / Arsitektur**:
-   - **Wajib Jalankan `overthinking`**: Lihat 3-5 langkah ke depan (skalabilitas, biaya tersembunyi, race conditions) dan komunikasikan dengan bahasa sederhana ramah manusia.
-4. **Ketika Merancang UI / Notifikasi / Pesan Error**:
-   - **Wajib Jalankan `orang-awam`**: Singkirkan semua istilah teknis kaku, minimalkan langkah form, dan pastikan pengguna paling awam sekalipun merasa nyaman dan tenang.
-
----
-
-## 2. Trigger 2: Melalui Slash Commands
-
-Agent wajib merespons perintah slash command berikut secara mendalam:
-- **`/be-detective`** atau **`/detective [keluhan]`**: Mode olah TKP forensik, perburuan bukti empiris, dan pembuktian akar masalah tanpa tebak-tebakan.
-- **`/hakim`** atau **`/judge [kasus/solusi]`**: Mode persidangan ketat untuk menguji bukti detektif dengan uji silang skeptis sebelum disahkan.
-- **`/anti-overengineering`** atau **`/simple [kode]`**: Mode pemangkas brutal kode, membuang abstraksi mubazir, dan merampingkan solusi (Occam's razor).
-- **`/orang-awam`** atau **`/user-biasa [UI/alur]`**: Mode audit UX dari kacamata staf kantor yang lelah di hari Jumat sore.
-- **`/overthinking [ide/fitur]`**: Mode radar risiko 3-Horizon (Hari 1-7, Bulan 1-3, Bulan 6-12).
-- **`/manipulator [kode/fitur]`**: Mode peretas celah dan pengerasan benteng kode secara radikal.
+1. **On Bugs, Crashes, or Logic Failures:**
+   - **Run `be-detective`:** Never guess or apply random edits. Inspect logs, capture exact file/line numbers, verify faulty values, and build a case file.
+   - **Run `hakim`:** Cross-examine the investigator's evidence skeptically. If proof is weak, reject and gather stronger proof before touching code.
+2. **When Writing or Refactoring Code:**
+   - **Run `anti-overengineering`:** Reject premature abstractions and heavy dependencies for trivial work; trim code down to the cleanest native form.
+   - **Run `manipulator`:** Attack your own draft (chaos inputs, network timeouts, double-clicks) and harden the implementation immediately.
+3. **When Designing Features or Architecture:**
+   - **Run `overthinking`:** Project 3–5 steps ahead (scaling limits, hidden API costs, race conditions) and explain risks clearly.
+4. **When Designing UI, Notifications, or Error Messages:**
+   - **Run `orang-awam`:** Strip out technical jargon, reduce input steps, and ensure any non-technical user feels calm and guided.
 
 ---
 
-## 3. Trigger 3: Melalui Frasa Prompt Alami
+## 2. Slash Commands
 
-Ketika user berbicara santai seperti:
-- *"Jadilah detektif"*, *"selidiki kenapa error"*, *"cari buktinya"* ➔ Aktifkan `be-detective` + `hakim`.
-- *"Sederhanakan kodenya"*, *"jangan overengineering"*, *"bikin yang simpel"* ➔ Aktifkan `anti-overengineering`.
-- *"Cek dari sisi user"*, *"kacamata orang awam"*, *"bahasa yang ramah"* ➔ Aktifkan `orang-awam`.
-- *"Overthinking fitur ini"*, *"apa resiko ke depannya"* ➔ Aktifkan `overthinking`.
-- *"Ragukan fitur ini"*, *"bentengi kodenya"* ➔ Aktifkan `manipulator`.
+- **`/be-detective`** or **`/detective [issue]`**: Forensic crime-scene debugging with empirical proof only.
+- **`/hakim`** or **`/judge [case]`**: Skeptical cross-examination before approving fixes.
+- **`/anti-overengineering`** or **`/simple [code]`**: Brutal bloat trimming (Occam's razor).
+- **`/orang-awam`** or **`/user-biasa [UI/flow]`**: Ordinary-user UX & anti-jargon audit.
+- **`/overthinking [idea]`**: 3-Horizon future risk audit (Days 1–7, Months 1–3, Months 6–12+).
+- **`/manipulator [feature]`**: Adversarial edge-case probing and immediate hardening.
+
+---
+
+## 3. Natural Language Cues
+
+- *"Investigate this bug"* / *"Find the root cause"* -> Activate `be-detective` + `hakim`.
+- *"Simplify this"* / *"Avoid over-engineering"* -> Activate `anti-overengineering`.
+- *"Check from a user's perspective"* / *"Make this beginner-friendly"* -> Activate `orang-awam`.
+- *"What could go wrong long-term?"* / *"Overthink this"* -> Activate `overthinking`.
+- *"Stress-test this"* / *"Harden this code"* -> Activate `manipulator`.

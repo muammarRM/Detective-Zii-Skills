@@ -1,16 +1,16 @@
-# 🚀 Panduan Pasang (`Detective-Zii-Skills`)
+# 🚀 Installation Guide (`Detective-Zii-Skills`)
 
-Pilih cara pasang yang paling cocok dengan AI coding agent yang kamu pakai.
+Choose the installation method that matches your AI coding agent setup.
 
 ---
 
-## Cara 1: Pakai CLI `skills` (Paling Praktis)
+## Option 1: Install via `skills` CLI (Recommended)
 
 ```bash
 npx skills add muammarRM/Detective-Zii-Skills
 ```
 
-Untuk memilih skill tertentu saja:
+To install specific skills only:
 
 ```bash
 npx skills add muammarRM/Detective-Zii-Skills --skill be-detective hakim anti-overengineering
@@ -18,28 +18,28 @@ npx skills add muammarRM/Detective-Zii-Skills --skill be-detective hakim anti-ov
 
 ---
 
-## Cara 2: Pasang Manual Global di Antigravity
+## Option 2: Manual Global Install (Antigravity)
 
-Agar seluruh skill & pemicu otomatisnya aktif di semua proyek:
+Make all skills and optional automatic triggers available across every project:
 
-### 1. Salin Folder `skills/`
-Copy **semua folder di dalam `skills/`** ke direktori skill global Antigravity:
-- **Windows:** `C:\Users\<NAMA_USER>\.gemini\config\skills\`
+### 1. Copy `skills/`
+Copy **every folder inside `skills/`** into your global Antigravity skills directory:
+- **Windows:** `C:\Users\<YOUR_USER>\.gemini\config\skills\`
 - **macOS / Linux:** `~/.gemini/config/skills/`
 
-### 2. Salin File `rules/` (Opsional tapi Direkomendasikan)
-Copy file di dalam `rules/` ke:
-- **Windows:** `C:\Users\<NAMA_USER>\.gemini\config\rules\`
+### 2. Copy `rules/` (Optional, Enables Always-On Routing)
+Copy the `.md` files inside `rules/` into:
+- **Windows:** `C:\Users\<YOUR_USER>\.gemini\config\rules\`
 - **macOS / Linux:** `~/.gemini/config/rules/`
 
 > [!TIP]
-> Jika kamu tidak ingin agent otomatis menjalankan mode *Cognitive Council* di setiap prompt, **lewati langkah 2** (`auto_context_skill_router.md` dan `overthinking_and_manipulator.md`). Semua skill tetap bisa dipanggil kapan saja lewat prompt atau nama skill.
+> Prefer invoking skills manually instead of automatically on every prompt? **Skip step 2** for `auto_context_skill_router.md` and `overthinking_and_manipulator.md`—you can still trigger any skill on demand by name or slash command.
 
 ---
 
-## Cara 3: Pasang Per Project (Antigravity / Claude Code / Codex / Cursor)
+## Option 3: Project-Local Install (Antigravity / Claude Code / Codex / Cursor)
 
-1. Salin folder skill dari `skills/` ke salah satu folder proyek berikut:
-   - `.agents/skills/` (standar Antigravity / Codex)
-   - `.claude/skills/` (Claude Code)
-2. Jika ingin pemicu otomatis ikut aktif hanya di proyek tersebut, salin aturan dari `rules/` ke file instruksi proyekmu (`GEMINI.md` atau `CLAUDE.md`) dan masukkan ke `.gitignore` agar tidak terbawa ke repo tim.
+1. Copy the desired folders from `skills/` into your project root:
+   - `.agents/skills/` (Antigravity / Codex convention)
+   - `.claude/skills/` (Claude Code convention)
+2. To enable automatic routing only inside that project, append the contents of `rules/` to your project's `GEMINI.md` or `CLAUDE.md` (and keep personal rules ignored in `.gitignore` if collaborating on a team repo).

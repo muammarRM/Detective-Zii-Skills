@@ -1,76 +1,75 @@
 ---
 name: overthinking
-description: Anticipates hidden risks, projects future consequences, and provides simple, plain-language risk management. Triggers automatically on feature/code tasks, via slash command "/overthinking", or when prompted with "gunakan skill overthinking" / "pakai skill overthinking".
+description: Anticipates hidden risks, projects 1–12+ month consequences, and translates complex technical threats into plain-language risk management and actionable mitigations. Triggers automatically on feature and architecture tasks, via "/overthinking", or when asked to evaluate future risks or edge cases.
+license: MIT
+metadata:
+  author: muammarRM
+  version: "1.0.0"
 ---
 
 # Overthinking: Anticipatory Risk & Future Radar
 
 ## Overview
-Skill **`overthinking`** adalah kemampuan berpikir antisipatif tingkat tinggi. Ini bukan overthinking negatif (anxiety/kelumpuhan analisis), melainkan **Proactive Risk Intelligence**: selalu melihat 3-5 langkah ke depan untuk memproyeksikan resiko tersembunyi dan dampaknya di masa depan.
+**`overthinking`** turns constructive overthinking into **Proactive Risk Intelligence**—not analysis paralysis, but always looking 3–5 steps ahead to spot hidden traps before they explode in production.
 
-Prinsip Utama:
-1. **Pikirkan Dampak Jauh ke Depan**: Jangan hanya melihat apa yang diminta hari ini, tapi apa dampaknya dalam 1 bulan, 6 bulan, hingga 1 tahun ke depan.
-2. **Bahasa Manusiawi & Sederhana**: Pemikiran rumit harus diterjemahkan menjadi penjelasan yang sangat mudah dipahami (konsep ELI5, santai, tanpa istilah teknis yang menakut-nakuti).
-3. **Manajemen Resiko yang Aplikatif**: Setiap resiko yang diidentifikasi WAJIB disertai solusi mitigasi nyata (langkah aman sekarang vs langkah jangka panjang).
-
----
-
-## 3 Jalur Pemicu (Tri-Trigger Activation)
-
-Skill ini aktif melalui salah satu dari 3 jalur berikut:
-1. **Jalur Otomatis**: Berjalan otomatis setiap kali merancang arsitektur, endpoint, alur logika, atau fitur aplikasi.
-2. **Jalur Slash Command**: Dipicu secara mendalam ketika user mengetik `/overthinking`.
-3. **Jalur Prompt Alami**: Dipicu ketika user berkata *"gunakan skill overthinking"*, *"pakai skill overthinking"*, *"overthinking fitur ini"*, atau sejenisnya.
+### Core Principles
+1. **Think Across Time Horizons:** Don't only evaluate whether code works today; project what happens in 1 week, 3 months, and 12+ months.
+2. **Plain, Calm Communication:** Translate complex failure modes into clear, approachable analogies that non-specialists can grasp immediately.
+3. **Actionable Mitigations Only:** Every risk raised must include both a **quick safe guard today** and a **long-term scaling path**.
 
 ---
 
-## 3 Sudut Pandang Masa Depan (The 3-Horizon Radar)
+## Tri-Trigger Activation
 
-Ketika skill ini aktif, lakukan analisis mental melalui 3 horizon:
+1. **Automatic:** Activates when designing architecture, API endpoints, database schemas, or new product flows.
+2. **Slash Command:** Invoked directly via `/overthinking [idea/feature]`.
+3. **Natural Language:** Triggered when asked *"overthink this feature"*, *"what could go wrong later?"*, or *"check long-term risks"*.
 
-```
-[Prompt / Fitur yang Dinilai]
+---
+
+## The 3-Horizon Risk Radar
+
+```text
+[Proposed Feature / Architecture]
               │
-              ├──> Horizon 1: Hari 1 - 7 (Risiko Langsung & Edge Cases)
-              │    Input aneh, user salah pencet, validasi jebol, error tak tertangani.
+              ├──> Horizon 1: Days 1–7 (Immediate Bugs & Edge Cases)
+              │    Weird inputs, accidental clicks, missing validation, unhandled errors.
               │
-              ├──> Horizon 2: Bulan 1 - 3 (Skalabilitas & Operasional)
-              │    Volume data naik, query lambat, race condition, biaya server, data kotor.
+              ├──> Horizon 2: Months 1–3 (Scale & Operations)
+              │    Table growth slowing queries, race conditions, rising API costs, dirty data.
               │
-              └──> Horizon 3: Bulan 6 - 12+ (Tech Debt & Arsitektur Jangka Panjang)
-                   Sistem kaku, vendor lock-in, sulit di-refactor, kepatuhan regulasi/privasi.
+              └──> Horizon 3: Months 6–12+ (Tech Debt & Long-Term Durability)
+                   Rigid coupling, vendor lock-in, painful refactors, privacy/compliance gaps.
 ```
 
 ---
 
-## Format Output: The Plain-Language Risk Briefing
-
-Sajikan hasil analisis kepada user dengan struktur ramah dan jelas:
+## Output Format: Plain-Language Risk Briefing
 
 ```markdown
-### 🔮 Penerawangan ke Depan (Future Radar)
-[Penjelasan singkat 2-3 kalimat dengan bahasa santai tapi tajam mengenai apa yang akan terjadi jika kita menjalankan ide ini sampai 6-12 bulan ke depan]
+### 🔮 Future Radar (Overthinking Check)
+[2-3 clear sentences explaining what happens if this design runs in production for 6–12 months]
 
-### ⚠️ Resiko Utama yang Terdeteksi
-1. **[Nama Resiko 1]**: [Mengapa ini bisa berbahaya bagi user/aplikasi dengan analogi sederhana]
-2. **[Nama Resiko 2]**: [Potensi masalah tak terduga yang sering luput]
+### ⚠️ Key Risks Detected
+1. **[Risk 1]:** [Why this hurts users or operations, explained with a simple real-world analogy]
+2. **[Risk 2]:** [An unexpected failure mode that is easy to overlook early on]
 
-### 🛡️ Manajemen Resiko & Solusi Mitigasi
-- **Langkah Aman Sekarang (Mitigasi Cepat)**: [Tindakan pencegahan instan yang langsung kita terapkan di kode/desain]
-- **Mitigasi Jangka Panjang**: [Langkah arsitektur agar sistem tetap aman saat aplikasi berkembang pesat]
+### 🛡️ Risk Management & Mitigations
+- **Quick Guard Today:** [Low-effort safeguard applied immediately in the current implementation]
+- **Long-Term Path:** [Clean architectural step once volume or usage grows]
 
-### 💡 Rekomendasi Langkah Selanjutnya
-[Saran tindakan konkrit yang paling seimbang antara kecepatan rilis dan keamanan]
+### 💡 Balanced Next Step
+[Practical recommendation balancing shipping speed and long-term safety]
 ```
 
 ---
 
-## Kategori Manajemen Resiko (Risk Categorization Matrix)
+## Common Risk Categorization Matrix
 
-| Kategori Resiko | Contoh Skenario Overthinking | Contoh Bahasa Sederhana ke User | Solusi Manajemen Resiko |
+| Risk Category | Classic Oversight | Plain-Language Impact | Concrete Mitigation |
 | :--- | :--- | :--- | :--- |
-| **Data Loss & Human Error** | User klik tombol hapus massal tanpa konfirmasi berlapis. | *"Kalau user sengaja atau kepeleset klik, seluruh riwayat transaksi bisa hilang selamanya dalam 1 detik."* | Gunakan **Soft Delete** (tanda arsip) + konfirmasi ketik teks nama entitas. |
-| **Security & Abuse** | Form input publik tanpa rate-limiting atau sanitasi. | *"Form ini bisa dibombardir oleh bot dengan 1.000 data spam per menit, membuat database penuh dan server down."* | Pasang captcha/turnstile, rate limiter IP, dan validasi ketat di sisi server. |
-| **Performance Bottleneck** | Query SQL `SELECT *` tanpa pagination saat data masih sedikit. | *"Sekarang masih 10 baris data terasa cepat. Begitu data mencapai 50.000 baris, aplikasi akan loading berputar lama dan bikin user kabur."* | Terapkan pagination sejak hari pertama dan batasi kolom yang di-fetch. |
-| **Concurrency / Race Condition** | Dua user membeli stok terakhir di detik yang sama. | *"Jika ada promo diskon kilat, dua pembeli bisa mengklaim 1 barang yang sama, menyebabkan stok minus dan komplain pelanggan."* | Gunakan database transaction lock / atomic decrement. |
-| **Hidden Financial Cost** | Pemanggilan API berbayar atau AI model tanpa caching. | *"Tiap kali ada yang refresh halaman, kita bayar ke penyedia API. Kalau traffic naik, tagihan kartu kredit bisa melonjak tanpa disadari."* | Pasang caching response dan batasan kuota per user/per jam. |
+| **Data Loss & Human Error** | Bulk delete button without secondary confirmation. | *"One accidental click could wipe out years of customer records in a second."* | Use **Soft Delete** + typed confirmation for destructive bulk actions. |
+| **Security & Abuse** | Public form with zero rate limiting or server sanitization. | *"A bot could flood this form with 1,000 spam rows a minute and crash the database."* | Add IP/user rate limiting, bot protection, and strict server validation. |
+| **Performance Bottleneck** | Unpaginated `SELECT *` queries while test tables only have 10 rows. | *"It feels instant with 10 records, but at 50,000 rows the page will spin until users give up."* | Enforce pagination and explicit column projection from day one. |
+| **Concurrency / Race Condition** | Two users claiming the last stock item in the same millisecond. | *"During a flash sale, two buyers can check out the same last item, causing negative inventory."* | Use atomic updates or database transaction locks. |
+| **Hidden Financial Cost** | Uncached paid third-party/AI API calls on every page reload. | *"Every browser refresh hits a paid API. A traffic spike could quietly burn through your billing card."* | Add response caching and per-user/hourly rate caps. |

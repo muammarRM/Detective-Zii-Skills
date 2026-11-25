@@ -1,101 +1,98 @@
 ---
 name: manipulator
-description: Aggressively doubts assumptions, stress-tests flaws, and proactively hardens code/features. Triggers automatically on feature/code tasks, via slash command "/manipulator", or when prompted with "gunakan skill manipulator" / "pakai skill manipulator".
+description: Radical self-skepticism and proactive code hardening. Acts as an adversarial auditor that doubts initial drafts across chaos inputs, network failures, race conditions, and silent UX failures—then immediately patches the flaws. Triggers on coding/feature tasks, via "/manipulator", or when asked to stress-test or harden code.
+license: MIT
+metadata:
+  author: muammarRM
+  version: "1.0.0"
 ---
 
 # Manipulator: Radical Self-Skepticism & Proactive Hardening
 
 ## Overview
-Skill **`manipulator`** adalah mekanisme "Devil's Advocate" dan skeptisisme ekstrem terhadap semua pekerjaan atau fitur. Skill ini memanipulasi sudut pandang menjadi seorang auditor bengis yang **meragukan segala asumsi, mencari titik lemah, dan membuktikan kode/desain tersebut rapuh**.
+**`manipulator`** is a built-in devil's advocate and ruthless adversarial auditor. It deliberately doubts every first draft, assumes real-world environments are hostile, and actively proves where an implementation could crack.
 
-> *"Jangan pernah puas dengan draf pertama. Asumsikan kode tersebut pasti memiliki celah yang akan meledak saat dijalankan di dunia nyata."*
+> *"Never trust a happy-path first draft. Assume your code has blind spots waiting to detonate in production."*
 
-Kunci dari skill ini: **Keraguan BUKAN sekadar kritik pasif, melainkan dorongan untuk LANGSUNG MEMPERBAIKI fitur tersebut.**
-
----
-
-## 3 Jalur Pemicu (Tri-Trigger Activation)
-
-Skill ini aktif melalui salah satu dari 3 jalur berikut:
-1. **Jalur Otomatis**: Berjalan otomatis setiap kali menulis kode atau membuat fitur baru, memastikan kode yang dihasilkan bukan sekadar draf mentah tapi sudah dibentengi.
-2. **Jalur Slash Command**: Dipicu secara mendalam ketika user mengetik `/manipulator`.
-3. **Jalur Prompt Alami**: Dipicu ketika user berkata *"gunakan skill manipulator"*, *"pakai skill manipulator"*, *"ragukan fitur/kode ini"*, atau sejenisnya.
+The core rule: **Skepticism is never passive criticism—every flaw discovered must be hardened immediately in the code.**
 
 ---
 
-## 5 Lensa Keraguan Ekstrem (The 5 Adversarial Lenses)
+## Tri-Trigger Activation
 
-Ketika skill ini aktif, hadapkan fitur/kode pada 5 pertanyaan skeptis ini:
+1. **Automatic:** Runs whenever writing or modifying application code so deliverables leave as hardened implementations rather than fragile prototypes.
+2. **Slash Command:** Invoked directly via `/manipulator [feature/code]`.
+3. **Natural Language:** Triggered when asked to *"stress-test this code"*, *"doubt your assumptions"*, or *"harden this feature"*.
 
-```
+---
+
+## The 5 Adversarial Lenses
+
+```text
                   ┌────────────────────────────────────────┐
-                  │          Draf Fitur / Kode             │
+                  │         Draft Feature / Code           │
                   └───────────────────┬────────────────────┘
                                       │
-           ┌──────────────────────────┴──────────────────────────┐
+           ┌──────────────────────────┼──────────────────────────┐
            ▼                          ▼                          ▼
-   [1. Keraguan Input]       [2. Keraguan Jaringan]     [3. Keraguan State]
-   - Input kosong/null?      - DB mati mendadak?        - User double-click?
-   - Karakter aneh / XSS?    - API 3rd party timeout?   - 2 user ubah bersamaan?
-   - Ukuran file raksasa?    - Koneksi lambat/putus?    - Token kedaluwarsa?
+   [1. Chaos Inputs]         [2. Network Chaos]         [3. State & Races]
+   - Empty / null values?    - DB drops mid-request?    - User double-clicks?
+   - Huge text / XSS?        - 3rd-party API timeout?   - Concurrent edits?
+   - Unexpected types?       - Flaky mobile network?    - Expired auth token?
            │                          │                          │
-           └──────────────────────────┬──────────────────────────┘
+           └──────────────────────────┼──────────────────────────┘
                                       │
            ┌──────────────────────────┴──────────────────────────┐
            ▼                                                     ▼
-[4. Keraguan Overthinking]                              [5. Keraguan UX / Silent Failure]
-- Apakah resiko jangka panjang                          - Jika error, apakah layar putih?
-  sudah tertangani di sini?                             - Apakah pesan error membingungkan?
-- Apakah ini akan jadi bom waktu?                       - Apakah user tahu aksi gagal?
+ [4. Overthinking Alignment]                           [5. Silent UX Failures]
+ - Does this create long-term                          - On error, blank screen?
+   technical debt?                                     - Unclear error recovery?
+ - Any hidden scaling traps?                           - Stuck loading spinner?
                                       │
                                       ▼
                   ┌────────────────────────────────────────┐
-                  │    PERBAIKAN & PENGERASAN KODE (FIX)   │
-                  │ (Tambahkan guard, retry, UX, tes TDD)  │
+                  │   HARDEN & PATCH IMMEDIATELY (FIX)     │
+                  │  (Guards, timeouts, locks, tests, UX)  │
                   └────────────────────────────────────────┘
 ```
 
-### 1. Lensa Input Ekstrem (Chaos Input)
-- *"Bagaimana jika input bernilai `null`, `undefined`, string kosong `""`, atau berisi spasi doang?"*
-- *"Bagaimana jika user mengetik 100.000 karakter, emoji aneh, atau tag HTML jahat `<script>`?"*
-- **Aksi Perbaikan**: Pasang validasi batas input (panjang min/max), sanitasi XSS, dan pengecekan tipe data yang tegas.
+### 1. Chaos Input Lens
+- *"What if the payload is `null`, `undefined`, `""`, or whitespace only?"*
+- *"What if someone submits 100,000 characters, unexpected Unicode, or malicious XSS payloads?"*
+- **Action:** Add explicit type checks, min/max bounds, and output escaping/sanitization.
 
-### 2. Lensa Kegagalan Jaringan & Dependensi (Chaos Network)
-- *"Bagaimana jika server database lambat merespon lebih dari 10 detik?"*
-- *"Bagaimana jika API pihak ketiga mengembalikan status 500 atau respon kosong?"*
-- **Aksi Perbaikan**: Pasang `timeout`, mekanisme `try-catch` dengan fallback data yang masuk akal, dan *graceful degradation*.
+### 2. Network & Dependency Failure Lens
+- *"What happens if the database or upstream API stalls past 10 seconds or returns HTTP 500?"*
+- **Action:** Configure explicit request timeouts, safe `try-catch` boundaries with meaningful fallback behavior, and graceful degradation.
 
-### 3. Lensa Balapan & Kejadian Ganda (Race Conditions & Idempotency)
-- *"Bagaimana jika user menekan tombol 'Bayar' atau 'Simpan' 5 kali berturut-turut dengan cepat?"*
-- *"Bagaimana jika dua proses mengakses baris data yang sama secara bersamaan?"*
-- **Aksi Perbaikan**: Buat tombol otomatis disable saat loading (debounce/throttle), tambahkan token idempotency atau transaction lock di database.
+### 3. Race Conditions & Idempotency Lens
+- *"What happens if a user taps 'Pay' or 'Save' five times in one second?"*
+- *"What if two workers modify the same record concurrently?"*
+- **Action:** Disable/debounce submit controls during flight, enforce idempotency keys, and wrap critical writes in atomic DB transactions.
 
-### 4. Lensa Penyelarasan Overthinking (Overthinking Cross-Check)
-- *"Apakah fitur yang baru dibuat ini justru memicu resiko jangka panjang yang dideteksi oleh skill overthinking?"*
-- **Aksi Perbaikan**: Rapikan struktur kode, hilangkan hardcoded value, pastikan modular dan sesuai aturan *Ponytail Ladder*.
+### 4. Overthinking Alignment Lens
+- *"Does this patch introduce a future bottleneck flagged by `overthinking`?"*
+- **Action:** Remove hardcoded magic values, keep boundaries clean, and stay compliant with `anti-overengineering`.
 
-### 5. Lensa Kegagalan Diam (Silent Failure & UX Recovery)
-- *"Jika fitur ini gagal di browser/aplikasi, apa yang dilihat user? Layar putih polos? Tombol berputar selamanya tanpa akhir?"*
-- **Aksi Perbaikan**: Berikan feedback visual yang jelas (toast/alert manusiawi), jangan biarkan state menggantung (reset tombol ke kondisi semula).
+### 5. Silent Failure & UX Recovery Lens
+- *"If this call fails in the browser, does the user stare at a blank screen or an infinite spinner?"*
+- **Action:** Always reset loading state in `finally` blocks and surface a calm, actionable message (`orang-awam`).
 
 ---
 
-## Protokol Pelaporan ke User: The Doubt & Hardening Report
-
-Setelah meragukan dan memperbaiki fitur, laporkan kepada user dengan transparan dan jelas:
+## Output Format: Doubt & Hardening Report
 
 ```markdown
-### 🔍 Uji Keraguan (Self-Skepticism Audit)
-Saya meragukan draf awal fitur ini pada aspek berikut:
-1. **[Keraguan 1]**: [Contoh: Apa yang terjadi jika user klik berkali-kali?]
-2. **[Keraguan 2]**: [Contoh: Bagaimana jika koneksi internet terputus saat proses berjalan?]
+### 🔍 Self-Skepticism Audit (Manipulator)
+I challenged the initial implementation on these failure points:
+1. **[Doubt 1]:** [Example: What happens on rapid double-click submission?]
+2. **[Doubt 2]:** [Example: What happens if the upstream API times out mid-flight?]
 
-### 🛠️ Pengerasan Fitur yang Diterapkan (Hardening Fixes)
-Berdasarkan keraguan tersebut, fitur langsung diperbaiki dengan:
-- ✅ **[Solusi 1]**: [Pencegahan klik ganda dengan debounce + disabling tombol]
-- ✅ **[Solusi 2]**: [Penanganan error dengan timeout 5 detik + pesan gagal yang ramah]
-- ✅ **[Solusi 3]**: [Validasi input ketat di sisi server/klien]
+### 🛠️ Hardening Fixes Applied
+- ✅ **[Fix 1]:** [Added loading lock + server-side idempotency check]
+- ✅ **[Fix 2]:** [Added 5s request timeout + safe error fallback]
+- ✅ **[Fix 3]:** [Enforced strict schema validation on the server]
 
-### 🧪 Verifikasi / Bukti Pengujian
-[Ringkasan singkat bagaimana fitur ini sudah diuji dan terbukti aman dari keraguan tadi]
+### 🧪 Verification Proof
+[Short summary of tests/checks run after hardening to prove these edge cases hold]
 ```

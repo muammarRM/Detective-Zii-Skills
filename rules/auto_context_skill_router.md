@@ -1,66 +1,58 @@
 ---
 name: auto-context-skill-router
-description: Automatically routes and triggers the best-matching global skills based on task context whenever the user prompts, reports a bug, designs a feature, or says "gunakan skill", eliminating the need to remember thousands of skill names.
+description: Automatically routes and triggers the best-matching global skills based on task context whenever a user prompts, reports a bug, designs a feature, or asks to activate skills without needing to memorize skill names.
 trigger: always_on
 ---
 
 # Rule: Context-Aware Smart Skill Router
 
-Aturan ini memastikan pengguna TIDAK PERLU mengingat atau menghafal ribuan nama skill yang terpasang. Agent secara cerdas, otomatis, dan proaktif mendeteksi konteks pembicaraan dan mengaktifkan ekosistem skill yang paling relevan di setiap prompt.
+This rule removes the burden of memorizing dozens or thousands of skill names. The agent automatically detects the user's intent and activates the right combination of skills on every prompt.
 
 ---
 
-## 1. Pemicu Otomatis (Trigger Activation)
+## 1. Automatic Triggers
 
-Aturan ini aktif di **setiap prompt pengguna**, khususnya ketika:
-- **Terdeteksi Bug / Error / Kerusakan Logika**: Otomatis aktifkan **`be-detective`** (olah TKP & buru bukti) ➔ **`hakim`** (sidang uji bukti silang).
-- **Penulisan Kode / Refactoring**: Otomatis aktifkan **`anti-overengineering`** (pangkas bloat & abstraksi mubazir) + **`manipulator`** (bentengi celah).
-- **Desain Antarmuka (UI/UX) & Pesan Pengguna**: Otomatis aktifkan **`orang-awam`** (empati pengguna nyata, anti-jargon, kurangi friksi).
-- **Perancangan Fitur / Arsitektur Baru**: Otomatis aktifkan **`overthinking`** (radar risiko 1-12 bulan ke depan).
-- **Instruksi Alami**: User mengetik *"gunakan skill"*, *"pakai skill"*, *"aktifkan skill"*, *"selidiki bug ini"*, *"sederhanakan"*, *"cek dari sisi user"*, dll.
-
----
-
-## 2. Alur Routing Berdasarkan Konteks (Context Classification)
-
-Agent secara otomatis memetakan kebutuhan user ke kategori skill terbaik:
-
-1. **Investigasi Masalah & Debugging (Anti Tebak-Tebakan)**:
-   - *Target Skill Utama*: `be-detective`, `hakim`, `investigate-first`, `systematic-debugging`
-   - *Aksi*: Kumpulkan bukti nyata di TKP (log, baris kode, anomali variabel) via `be-detective`, lalu uji di mahkamah `hakim` sebelum menyentuh kode. **Dilarang keras menebak!**
-
-2. **Kesederhanaan Kode & Anti-Bloat (Kodingan Ramping)**:
-   - *Target Skill Utama*: `anti-overengineering`, `ponytail_ladder`, `clean-code`
-   - *Aksi*: Pangkas lapisan class yang tidak perlu, gunakan fitur standar native, dan tolak abstraksi prematur (Occam's Razor).
-
-3. **Desain & UI/UX Ramah Manusia (Empati Pengguna)**:
-   - *Target Skill Utama*: `orang-awam`, `ui-ux-pro-max`, `frontend-ui-engineering`, `tailwind-design-system`
-   - *Aksi*: Evaluasi dari kacamata orang awam yang lelah. Hapus jargon teknis, sederhanakan alur form, dan beri feedback visual yang menenangkan.
-
-4. **Pertahanan Kode & Uji Skeptis**:
-   - *Target Skill Utama*: `manipulator`, `cso`, `differential-review`, `security-best-practices`
-   - *Aksi*: Ragukan draf kode sendiri terhadap chaos input, koneksi putus, dan klik ganda, lalu langsung bentengi kodenya.
-
-5. **Radar Risiko Masa Depan & Strategi**:
-   - *Target Skill Utama*: `overthinking`, `plan-ceo-review`, `marketing-mindset`
-   - *Aksi*: Prediksi dampak sistem dan operasional dalam 1–12 bulan ke depan dengan bahasa yang santai dan solutif.
-
-6. **Pengujian, TDD & QA**:
-   - *Target Skill Utama*: `tdd-orchestrator`, `test-driven-development`, `playwright-skill`, `webapp-testing`
-   - *Aksi*: Menulis test lebih dulu (Red-Green-Refactor) dan menjalankan validasi otomatis.
-
-7. **Infrastruktur & Cloud (cPanel, Cloudflare, DevOps)**:
-   - *Target Skill Utama*: `cloudflare`, `docker-compose`, `workers-best-practices`, `git-workflow`
-   - *Aksi*: Menata konfigurasi deployment, build asset, dan automasi rilis.
+Active on **every user prompt**, especially when:
+- **Bug / Error / Logic Failure Detected:** Activate **`be-detective`** (crime-scene investigation & empirical proof) -> **`hakim`** (skeptical cross-examination).
+- **Writing / Refactoring Code:** Activate **`anti-overengineering`** (strip bloat & premature abstractions) + **`manipulator`** (stress-test & harden edge cases).
+- **UI/UX Design & User Messaging:** Activate **`orang-awam`** (everyday user empathy, zero jargon, lower friction) alongside **`human-uiux-design`** and **`ui-writing`**.
+- **New Feature / Architecture Design:** Activate **`overthinking`** (1–12+ month future risk radar).
+- **Natural Language Cues:** Prompts such as *"use detective mode"*, *"investigate this"*, *"simplify this"*, *"check from a user's perspective"*, *"stress-test this"*, etc.
 
 ---
 
-## 3. Format Respon ke Pengguna
+## 2. Context-to-Skill Routing Map
 
-Ketika skill otomatis diaktifkan, berikan tanda singkat di awal respon agar pengguna tahu skill mana yang sedang bekerja, lalu langsung eksekusi tugasnya:
+1. **Bug Investigation & Debugging (Zero Guessing):**
+   - *Primary Skills:* `be-detective`, `hakim`
+   - *Action:* Capture real runtime evidence (logs, line numbers, variable state) via `be-detective`, then cross-examine in `hakim` before editing code. **Never guess.**
+
+2. **Code Minimalism & Anti-Bloat:**
+   - *Primary Skills:* `anti-overengineering`
+   - *Action:* Eliminate unnecessary layers, prefer native language/framework features, and reject premature abstractions (Occam's razor).
+
+3. **Human-Centered UI/UX & Copy:**
+   - *Primary Skills:* `orang-awam`, `human-uiux-design`, `ui-writing`
+   - *Action:* Audit through the eyes of a tired non-technical user. Remove technical jargon, cut form friction, and provide calm recovery messages.
+
+4. **Adversarial Hardening:**
+   - *Primary Skills:* `manipulator`
+   - *Action:* Challenge your own first draft against chaos inputs, network timeouts, and double-clicks, then patch vulnerabilities immediately.
+
+5. **Long-Horizon Risk Radar:**
+   - *Primary Skills:* `overthinking`
+   - *Action:* Forecast 1–12 month scaling, operational, and cost risks in plain, approachable language with concrete mitigations.
+
+6. **Repository & Commit Hygiene:**
+   - *Primary Skills:* `anti-dummy-leak`
+   - *Action:* Audit `git status` and `git diff --cached` before any commit or push to block local prompts, scratch scripts, dumps, and archives.
+
+---
+
+## 3. Response Header Format
+
+Whenever skills activate automatically, open with a brief callout indicating which skills are active, then execute immediately:
 
 > [!TIP]
-> 🎯 **Skill Aktif Otomatis**: `[nama-skill-1]` + `[nama-skill-2]`  
-> *Konteks*: [Penjelasan 1 kalimat mengapa skill ini bekerja bersama untuk menyelesaikan permintaan]*
-
-Setelah header tersebut, agent langsung menjalankan investigasi, audit, atau koding sesuai workflow skill tersebut tanpa meminta konfirmasi berbelit-belit.
+> 🎯 **Active Skills**: `[skill-1]` + `[skill-2]`  
+> *Context*: [One-sentence explanation of why these skills are working together for this request]

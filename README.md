@@ -1,120 +1,120 @@
 # 🕵️‍♂️ Detective Zii Skills (`Detective-Zii-Skills`)
 
-Koleksi **9 AI Agent Skills** + **3 Companion Rules** untuk mengubah AI coding agent menjadi tim rekayasa disiplin: debugging forensik berbasis bukti (*zero guessing*), pengujian skeptis sebelum eksekusi, arsitektur minimalis bebas *over-engineering*, UX ramah manusia, dan kebersihan repository Git.
+A collection of **9 AI Agent Skills** + **3 Companion Rules** designed to turn AI coding assistants (Antigravity, Claude Code, Codex, Cursor, Gemini CLI) into a disciplined engineering team: **evidence-based forensic debugging** (zero guessing), **skeptical verification**, **minimalist Occam's-razor architecture**, **calm human-first UX**, and **strict Git leak prevention**.
 
-Setiap skill dibuat dengan prinsip universal: **ANTI-OVERENGINEERING** (ramping, elegan, minim baris, dan bebas *bloat*).
+Built around one core rule: **anti-overengineering**—clean, minimal, practical, and zero bloat.
 
 ---
 
-## ⚡ Instalasi Cepat
+## ⚡ Quick Install
 
 ```bash
 npx skills add muammarRM/Detective-Zii-Skills
 ```
 
-Atau pasang manual untuk Antigravity, Claude Code, Codex, maupun Cursor — lihat langkah lengkapnya di **[INSTALL.md](INSTALL.md)**.
+Or install manually per tool / globally — see **[INSTALL.md](INSTALL.md)**.
 
 ---
 
-## 📦 Daftar Lengkap Skill (9 Skills)
+## 📦 Included Skills (9 Skills)
 
-### 1. The Cognitive Council (6 Skill Inti Mahkamah Kode)
-Keenam skill ini bekerja bersama secara terpadu melalui arsitektur **Tri-Trigger**: otomatis di setiap prompt, melalui slash commands (`/`), maupun lewat bahasa percakapan alami.
+### 1. The Cognitive Council (6 Core Mindset & Verification Skills)
+These six skills work together as a unified pipeline via **Tri-Trigger activation**: automatic context routing, `/slash` commands, and natural-language prompts.
 
-| Skill | Ikon & Peran | Fokus Utama | Pertanyaan Kunci |
+| Skill | Role | Core Focus | Key Question |
 | :--- | :--- | :--- | :--- |
-| **[`be-detective`](skills/be-detective/SKILL.md)** | 🕵️‍♂️ **Detektif Forensik** | Olah TKP bug & perburuan bukti nyata (*zero guessing*) | *"Mana nomor barisnya, isi variabelnya, dan bukti log saat meledak?"* |
-| **[`hakim`](skills/hakim/SKILL.md)** | ⚖️ **Hakim Agung** | Menguji silang bukti detektif & mengetok palu vonis sah | *"Apakah buktinya otentik di luar keraguan wajar, atau cuma kebetulan?"* |
-| **[`anti-overengineering`](skills/anti-overengineering/SKILL.md)** | 🪒 **Occam's Razor** | Memangkas kode berlebih, tolak abstraksi & library mubazir | *"Bisa selesai pakai 5 baris fungsi native tanpa bikin class baru?"* |
-| **[`orang-awam`](skills/orang-awam/SKILL.md)** | 👥 **Empati Pengguna** | Bahasa manusiawi, nol jargon teknis, minimalkan friksi UI | *"Apakah staf kantor yang lelah di Jumat jam 4 sore bisa pakai tanpa bingung?"* |
-| **[`overthinking`](skills/overthinking/SKILL.md)** | 🔮 **Radar Masa Depan** | Prediksi risiko 1–12 bulan ke depan & mitigasi santai | *"Apa dampak keputusan ini kalau data membengkak 10x dalam 6 bulan?"* |
-| **[`manipulator`](skills/manipulator/SKILL.md)** | 🛠️ **Inkuisitor Celah** | Skeptisisme radikal, uji chaos input & langsung bentengi | *"Bagaimana jika user klik 5 kali atau internet putus mendadak?"* |
+| **[`be-detective`](skills/be-detective/SKILL.md)** | 🕵️‍♂️ **Forensic Investigator** | Crime-scene debugging & empirical proof (*zero guessing*) | *"Where are the exact line numbers, variable state, and stack trace?"* |
+| **[`hakim`](skills/hakim/SKILL.md)** | ⚖️ **Supreme Judge** | Cross-examines evidence before approving any code change | *"Is this proof real beyond coincidence, and safe for the future?"* |
+| **[`anti-overengineering`](skills/anti-overengineering/SKILL.md)** | 🪒 **Occam's Razor** | Cuts bloat, premature abstractions, and needless packages | *"Can 5 lines of native code solve this without new classes?"* |
+| **[`orang-awam`](skills/orang-awam/SKILL.md)** | 👥 **User Empathy Lens** | Zero technical jargon, minimal form friction, calm UX | *"Can a tired non-technical user finish this at 4 PM Friday?"* |
+| **[`overthinking`](skills/overthinking/SKILL.md)** | 🔮 **Future Risk Radar** | Forecasts 1–12+ month scaling, cost, and ops risks plainly | *"What breaks if this table grows 10x in six months?"* |
+| **[`manipulator`](skills/manipulator/SKILL.md)** | 🛠️ **Adversarial Auditor** | Stress-tests chaos inputs, timeouts, and races, then patches | *"What happens if a user clicks Pay five times or Wi-Fi drops?"* |
 
-### 2. Utility & Guardrail Skills (3 Skill Tambahan)
+### 2. Utility & Guardrail Skills (3 Standalone Skills)
 
-| Skill | Fokus Utama |
+| Skill | Core Focus |
 | :--- | :--- |
-| **[`anti-dummy-leak`](skills/anti-dummy-leak/SKILL.md)** | Audit ketat sebelum `git commit` / `git push` agar file prompt AI, spec/plan, scratch script, dump data, arsip `.zip`, dan binary tidak bocor ke GitHub. |
-| **[`human-uiux-design`](skills/human-uiux-design/SKILL.md)** | Disiplin desain web & consumer utility yang tenang, intuitif, dan bebas *AI slop* (badge diet, anti sparkle spam, anti grid marketing generik). |
-| **[`ui-writing`](skills/ui-writing/SKILL.md)** | Standar UI writing & UX microcopy (tombol `Verb + Noun`, aturan 3-bagian pesan error yang ramah, dan lokalisasi Bahasa Indonesia yang natural). |
+| **[`anti-dummy-leak`](skills/anti-dummy-leak/SKILL.md)** | Pre-commit and pre-push Git audit blocking AI prompts, plans, scratch scripts, dumps, binaries, and `.zip` archives from leaking to remotes. |
+| **[`human-uiux-design`](skills/human-uiux-design/SKILL.md)** | Calm, high-utility web & consumer tool design discipline that strips out *AI slop* (badge spam, decorative sparkles, generic 3-card grids). |
+| **[`ui-writing`](skills/ui-writing/SKILL.md)** | Practical UX microcopy standards (`Verb + Noun` CTAs, 3-part humane error messages, concise helper text, and natural localization). |
 
 ---
 
-## 🔄 Alur Kolaborasi (*The Courtroom & Engineering Pipeline*)
+## 🔄 How the Cognitive Council Works
 
 ```text
-                                [MASALAH / FITUR / PERMINTAAN USER]
-                                                 │
-        ┌────────────────────────────────────────┴────────────────────────────────────────┐
-        ▼                                                                                 ▼
- [JALUR A: TERDETEKSI BUG / ERROR]                                             [JALUR B: FITUR / DESAIN BARU]
-        │                                                                                 │
-        ▼                                                                                 ▼
-┌───────────────────────────────┐                                             ┌───────────────────────────────┐
-│     SKILL: BE-DETECTIVE       │                                             │      SKILL: OVERTHINKING      │
-│   (Olah TKP & Bukti Empiris)  │                                             │   (Radar Risiko 1 - 12 Bulan) │
-│ - Baca stack trace & log presisi                                            │ - Prediksi bom waktu jangka panjang
-│ - Rumuskan hipotesis terarah  │                                             │ - Bahasa santai & mitigasi ramah│
-│ - Wajib bukti nomor baris     │                                             └───────────────┬───────────────┘
-└───────────────┬───────────────┘                                                             │
-                │ Berkas Perkara Lengkap                                                      ▼
-                ▼                                                             ┌───────────────────────────────┐
-┌───────────────────────────────┐                                             │      SKILL: MANIPULATOR       │
-│         SKILL: HAKIM          │                                             │  (Skeptisisme & Benteng Kode) │
-│   (Sidang Uji Silang Bukti)   │                                             │ - Ragukan draf pertama        │
-│ - Uji silang ala Manipulator  │                                             │ - Uji input ekstrim & timeout │
-│ - Uji masa depan Overthinking │                                             │ - LANGSUNG BENTENGI KODENYA   │
-│ - Tolak perbaikan lebay       │                                             └───────────────┬───────────────┘
-│                               │                                                             │
-│ [DITOLAK] ──► Cari bukti lagi │                                                             │
-│ [VONIS SAH]                   │                                                             │
-└───────────────┬───────────────┘                                                             │
-                │                                                                             │
-                └──────────────────────────────────────┬──────────────────────────────────────┘
-                                                       │
-                                                       ▼
-                        ┌─────────────────────────────────────────────────────────────┐
-                        │                 SARINGAN GANDA TAHAP AKHIR                  │
-                        ├──────────────────────────────┬──────────────────────────────┤
-                        │ SKILL: ANTI-OVERENGINEERING  │      SKILL: ORANG-AWAM       │
-                        │  (Pemangkas Bloat & Lapisan) │  (Audit Pengguna Nyata & UX) │
-                        │ - Hapus class/interface lebay│ - Hapus semua pesan jargon   │
-                        │ - Terapkan Ponytail Ladder   │ - Sederhanakan alur form     │
-                        │ - Solusi seringkas mungkin   │ - Berikan feedback tenang    │
-                        └──────────────────────────────┴──────────────────────────────┘
-                                                       │
-                                                       ▼
-                                     [KODE RAMPING, TANGGUH, AMAN,
-                                      TERBUKTI 100%, & RAMAH USER]
+                                 [BUG REPORT / NEW FEATURE / PROMPT]
+                                                  │
+        ┌─────────────────────────────────────────┴─────────────────────────────────────────┐
+        ▼                                                                                   ▼
+ [PATH A: BUG OR ERROR DETECTED]                                               [PATH B: NEW FEATURE OR DESIGN]
+        │                                                                                   │
+        ▼                                                                                   ▼
+┌───────────────────────────────┐                                               ┌───────────────────────────────┐
+│     SKILL: BE-DETECTIVE       │                                               │      SKILL: OVERTHINKING      │
+│   (Crime-Scene Forensics)     │                                               │   (1–12+ Month Risk Radar)    │
+│ - Inspect stack trace & logs  │                                               │ - Spot future bottlenecks     │
+│ - Test falsifiable hypotheses │                                               │ - Plain-language mitigations  │
+│ - Require exact line numbers  │                                               └───────────────┬───────────────┘
+└───────────────┬───────────────┘                                                               │
+                │ Case File                                                                     ▼
+                ▼                                                               ┌───────────────────────────────┐
+┌───────────────────────────────┐                                               │      SKILL: MANIPULATOR       │
+│         SKILL: HAKIM          │                                               │  (Skeptical Code Hardening)   │
+│  (Skeptical Cross-Exam)       │                                               │ - Attack the first draft      │
+│ - Edge-case stress test       │                                               │ - Test null, double-click, IO │
+│ - Long-term safety check      │                                               │ - PATCH IMMEDIATELY           │
+│ - Reject bloated fixes        │                                               └───────────────┬───────────────┘
+│                               │                                                               │
+│ [REJECTED] -> Gather proof    │                                                               │
+│ [APPROVED] -> Proceed         │                                                               │
+└───────────────┬───────────────┘                                                               │
+                │                                                                               │
+                └───────────────────────────────────────┬───────────────────────────────────────┘
+                                                        │
+                                                        ▼
+                        ┌───────────────────────────────────────────────────────────────┐
+                        │                    FINAL DUAL FILTER                          │
+                        ├───────────────────────────────┬───────────────────────────────┤
+                        │  SKILL: ANTI-OVERENGINEERING  │       SKILL: ORANG-AWAM       │
+                        │  (Minimalist Occam's Razor)   │  (Ordinary-User Empathy Lens) │
+                        │ - Remove needless abstractions│ - Strip all technical jargon  │
+                        │ - Use native stdlib first     │ - Minimize form friction      │
+                        │ - Keep diffs lean & readable  │ - Calm, clear status feedback │
+                        └───────────────────────────────┴───────────────────────────────┘
+                                                        │
+                                                        ▼
+                                     [LEAN, VERIFIED, HARDENED,
+                                      & HUMAN-FRIENDLY OUTPUT]
 ```
 
 ---
 
-## ⚡ 3 Jalur Pemicu (*Tri-Trigger Activation*)
+## ⚡ Tri-Trigger Activation
 
-1. **Jalur Otomatis (dengan Companion Rules di `rules/`):**
-   - **Bug / Error:** `be-detective` (olah TKP) ➔ `hakim` (uji ketok palu).
-   - **Tulis / Ubah Kode:** `anti-overengineering` (ramping) + `manipulator` (bentengi celah).
-   - **Desain UI / Pesan:** `orang-awam` + `human-uiux-design` + `ui-writing`.
-   - **Arsitektur Baru:** `overthinking` (analisis 3 horizon risiko).
-2. **Jalur Slash Command:**
-   - `/be-detective` atau `/detective [masalah]`
-   - `/hakim` atau `/judge [kasus]`
-   - `/anti-overengineering` atau `/simple [kode]`
-   - `/orang-awam` atau `/user-biasa [UI/alur]`
-   - `/overthinking [ide]`
-   - `/manipulator [fitur]`
-3. **Jalur Bahasa Percakapan Alami:**
-   - *"Jadilah detektif dan selidiki error ini"*
-   - *"Uji bukti detektif dan ketok palu hakim"*
-   - *"Jangan overengineering ya, bikin yang simpel aja"*
-   - *"Cek dari kacamata orang awam"*
-   - *"Overthinking fitur ini"*
-   - *"Ragukan dan bentengi kode ini"*
+1. **Automatic (using Companion Rules in `rules/`):**
+   - **Bugs / Errors:** `be-detective` -> `hakim`
+   - **Writing / Editing Code:** `anti-overengineering` + `manipulator`
+   - **UI / Copy / Forms:** `orang-awam` + `human-uiux-design` + `ui-writing`
+   - **System Design:** `overthinking`
+2. **Slash Commands:**
+   - `/be-detective` or `/detective [issue]`
+   - `/hakim` or `/judge [case]`
+   - `/anti-overengineering` or `/simple [code]`
+   - `/orang-awam` or `/user-biasa [UI/flow]`
+   - `/overthinking [idea]`
+   - `/manipulator [feature]`
+3. **Natural Language:**
+   - *"Investigate this bug with evidence"*
+   - *"Cross-examine this fix before applying"*
+   - *"Simplify this and avoid over-engineering"*
+   - *"Check this from a non-technical user's perspective"*
+   - *"What could break 6 months from now?"*
+   - *"Stress-test and harden this code"*
 
 ---
 
-## 📂 Struktur Repository
+## 📂 Repository Structure
 
 ```text
 Detective-Zii-Skills/
@@ -132,13 +132,13 @@ Detective-Zii-Skills/
 │   ├── orang-awam/SKILL.md
 │   ├── overthinking/SKILL.md
 │   └── ui-writing/SKILL.md
-└── rules/                              # Opsional: aktifkan auto-trigger & pre-push guardrail
+└── rules/                              # Optional: enable always-on routing & commit guardrails
     ├── anti_dummy_leak.md
     ├── auto_context_skill_router.md
     └── overthinking_and_manipulator.md
 ```
 
-| Komponen | Lokasi Pasang Global (Default) |
+| Component | Default Global Install Path |
 | :--- | :--- |
-| **Semua Skill (`skills/*`)** | `~/.gemini/config/skills/<nama-skill>/SKILL.md` |
-| **Companion Rules (`rules/*`)** | `~/.gemini/config/rules/<nama-rule>.md` |
+| **All Skills (`skills/*`)** | `~/.gemini/config/skills/<skill-name>/SKILL.md` |
+| **Companion Rules (`rules/*`)** | `~/.gemini/config/rules/<rule-name>.md` |
